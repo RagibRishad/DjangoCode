@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ rgb.title }}
+{% endblock %}
+
+{% block content %}
+    <article>
+        <h2>
+            {{ rgb.title }}
+        </h2>
+
+        <section>
+            {% for step in rgb.step_set.all %}
+                <h3>{{ step.title }}</h3>
+                    {{ step.description }}
+            {% endfor %}
+
+        </section>
+
+    </article>
+{% endblock %}
